@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica de codificación y escala en dispositivos móviles -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>CHOCOREO - Postres Deliciosos</title>
+
+  <!-- Fuente externa: Montserrat, importada desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos internos: layout, tipografía, colores, y diseño responsivo básico -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff8f4;
+      color: #000;
+    }
+
+    /* ----- Header / Encabezado principal ----- */
+    header {
+      background-color: #fffdfd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .titulo h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .titulo span {
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    nav a {
+      color: #000;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* ----- Sección principal de presentación (hero) ----- */
+    .hero {
+      background-image: url('https://bluebell.com.ar/carta/wp-content/uploads/tortaOREO1.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ----- Grid de productos (tarjetas) ----- */
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .producto img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .producto p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .producto p.price {
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* ----- Formulario de pedidos ----- */
+    .formulario {
+      padding: 2rem;
+      background-color: #fff0ea;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .formulario h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, select, button {
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #000;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    /* ----- Sección de pago con Nequi ----- */
+    .pago-nequi {
+      text-align: center;
+      margin-top: 2rem;
+      background-color: #fff0ea;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .pago-nequi img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-top: 1rem;
+    }
+
+    .pago-nequi p {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
+    /* ----- Footer / pie de página ----- */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #000;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Encabezado principal con logo y navegación -->
+  <header>
+    <div class="logo-container">
+      <img src="https://i.ibb.co/39TDcXBS/Captura-de-pantalla-2025-05-15-165600.png" alt="Logo Chocoreo" />
+      <div class="titulo">
+        <h1>CHOCOREO</h1>
+        <span>La felicidad en cada bocado</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#productos">Postres</a>
+      <a href="#domicilio">Domicilio</a>
+    </nav>
+  </header>
+
+  <!-- Sección de presentación destacada -->
+  <section class="hero">
+    <h2>CHOCOREO</h2>
+    <p>La felicidad en cada bocado</p>
+  </section>
+
+  <!-- Catálogo de productos con imagen, descripción y precio -->
+  <section id="productos" class="productos">
+    <div class="producto">
+      <img src="https://i.pinimg.com/736x/bd/d5/ba/bdd5ba504d860b1c16d85a0257b62d08.jpg" alt="Chocotejas de Oreo" />
+      <h3>Chocotejas de Oreo</h3>
+      <p>Deliciosas chocotejas rellenas de crema de Oreo.</p>
+      <p class="price">3 chocotejas por $5.000 COP</p>
+    </div>
+    <div class="producto">
+      <img src="https://cdn0.uncomo.com/es/posts/3/5/1/como_hacer_paletas_de_oreo_51153_orig.jpg" alt="Paletas heladas de Oreo" />
+      <h3>Paletas heladas de Oreo</h3>
+      <p>Refrescantes paletas heladas con trozos de Oreo.</p>
+      <p class="price">1 paleta por $7.000 COP</p>
+    </div>
+    <div class="producto">
+      <img src="https://mandolina.co/wp-content/uploads/2020/11/postre-de-oreo.jpg" alt="Torta Oreo con dulce de leche" />
+      <h3>Torta Oreo con dulce de leche</h3>
+      <p>Exquisita torta de Oreo cubierta con dulce de leche y chocolate.</p>
+      <p class="price">$12.000 COP por porción</p>
+    </div>
+  </section>
+
+  <!-- Formulario conectado a Google Forms para registrar pedidos -->
+  <section id="domicilio" class="formulario">
+    <h3>Haz tu Pedido a Domicilio</h3>
+    <form
+      action="https://docs.google.com/forms/d/e/1FAIpQLSf8eTMJupxAPskN-xR3DmhN4prjmMz8kLoaPE7Lj7p_2Zq_9w/formResponse"
+      method="POST"
+      target="_blank"
+      onsubmit="alert('Pedido enviado, ¡gracias! Ahora realiza el pago con Nequi escaneando el código QR debajo.');"
+    >
+      <input type="text" name="entry.2005620554" placeholder="Tu nombre" required />
+      <input type="text" name="entry.1045781291" placeholder="Dirección de entrega" required />
+      <input type="tel" name="entry.1166974658" placeholder="Teléfono de contacto" required />
+      <select name="entry.839337160" required>
+        <option value="">Selecciona tu postre</option>
+        <option value="Chocotejas de Oreo">Chocotejas de Oreo</option>
+        <option value="Paletas heladas de Oreo">Paletas heladas de Oreo</option>
+        <option value="Torta Oreo con dulce de leche">Torta Oreo con dulce de leche</option>
+      </select>
+      <button type="submit">Enviar Pedido</button>
+    </form>
+  </section>
+
+  <!-- Sección de pago con QR de Nequi (manual, externo a la app) -->
+  <section class="pago-nequi">
+    <p>Después de hacer tu pedido, realiza el pago escaneando el código QR con Nequi:</p>
+    <img src="https://i.ibb.co/Q3kFvXmw/imagen-2025-05-15-173139571.png" alt="Código QR para pago Nequi" />
+    <p>Monto según tu pedido</p>
+  </section>
+
+  <!-- Pie de página legal -->
+  <footer>
+    <p>&copy; 2025 CHOCOREO - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
